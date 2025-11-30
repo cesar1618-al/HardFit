@@ -1,0 +1,354 @@
+:root {
+  --bg1: #050c19;
+  --bg2: #071a2c;
+  --accent: #0aa3ff;
+  --accent2: #004c78;
+  --text: #e7f5ff;
+  --muted: #a9c4d6;
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.06);
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(0,0,0,0.45);
+  scroll-behavior: smooth;
+}
+
+
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(160deg, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+
+header {
+  position: fixed;
+  top:0;left:0;right:0;
+  padding: 14px 30px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.area-img {
+  width: 50px;
+  border-radius: 8px;
+}
+
+.muestras {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+#muestra-img1 {
+  width: 17%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#muestra-img2 {
+  width: 22%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+header nav a {
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: .25s;
+}
+
+header nav a:hover {
+  color: var(--accent);
+  background: rgba(255,255,255,0.04);
+}
+
+section {
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+section p {
+  color: var(--muted);
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  transition: transform .4s;
+}
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+
+.infos { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.info {
+  flex: 1;
+  min-width: 260px;
+  background: var(--glass);
+  padding: 22px;
+  border-radius: var(--radius);
+  border:1px solid rgba(255,255,255,0.08);
+  transition: .25s;
+}
+.info:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display:inline-block;
+  margin-top:14px;
+  background: var(--accent);
+  padding:10px 16px;
+  border-radius: 12px;
+  color:#02121a;
+  font-weight:700;
+  transition:.25s;
+}
+.btn:hover {
+  background:#0086d6;
+}
+
+
+#rutina-Select {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(12, 5, 110, 0.89);
+  color: var(--text);
+  border: none;
+}
+
+#rutina-Result {
+  background: var(--card);
+  margin-top:20px;
+  padding:20px;
+  border-radius: var(--radius);
+}
+
+
+.calc-container {
+  margin-top: 25px;
+  background: var(--glass);
+  padding: 25px;
+  border-radius: var(--radius);
+  border:1px solid rgba(12, 5, 110, 0.89);
+}
+
+.field {
+  margin-bottom:15px;
+}
+
+input, select {
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  background: rgba(12, 5, 110, 0.89);
+  border:none;
+  color: var(--text);
+}
+
+button[type="submit"] {
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background: var(--accent);
+  color:#02121a;
+  font-weight:800;
+  cursor:pointer;
+  transition:.2s;
+}
+button[type="submit"]:hover {
+  background:#0086d6;
+}
+
+
+.results-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.card {
+  background: var(--card);
+  padding:14px;
+  border-radius: var(--radius);
+  text-align:center;
+}
+
+/* IMC BAR */
+.imc-bar-container {
+  margin-top: 6px;
+  height: 24px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.imc-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width .5s, background-color .5s;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  line-height:24px;
+}
+
+
+.suplementos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.suplemento {
+  flex: 0 1 280px;
+  background: var(--glass);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  transition: .25s;
+}
+
+.suplemento:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.suplemento img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+
+.entrenadores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.trainer {
+  flex: 0 1 280px;
+  background: var(--glass);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  transition: .25s;
+}
+
+.trainer:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.trainer img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+
+.testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 20px;
+}
+
+.testimonial {
+  flex: 0 1 280px;
+  background: var(--glass);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  transition: .25s;
+}
+
+.testimonial:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.perfil {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid rgba(255,255,255,0.25);
+}
+
+
+footer {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align:center;
+}
+
+.socials {
+  margin-top: 14px;
+  display:flex;
+  gap:18px;
+  justify-content:center;
+}
+
+.socials a {
+  color: var(--accent);
+  font-size: 20px;
+  transition:.25s;
+}
+.socials a:hover { color:#0590db; }
+
+
+.fade {
+  opacity:0;
+  transform: translateY(30px);
+  transition: .8s;
+}
+.fade.show {
+  opacity:1;
+  transform: translateY(0);
+}

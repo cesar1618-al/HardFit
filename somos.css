@@ -1,0 +1,76 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(160deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  --bg1: #050c19;
+  --bg2: #071a2c;
+  --accent: #0aa3ff;
+  --accent2: #004c78;
+  --text: #e7f5ff;
+  --muted: #a9c4d6;
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.06);
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(0,0,0,0.45);
+  scroll-behavior: smooth;
+}
+
+
+header {
+  position: fixed;
+  top:0;left:0;right:0;
+  padding: 14px 30px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.area-img {
+  width: 50px;
+  border-radius: 8px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+header nav a {
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: .25s;
+}
+
+header nav a:hover {
+  color: var(--accent);
+  background: rgba(255,255,255,0.04);
+}
+
+section {
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+section p {
+  color: var(--muted);
+}

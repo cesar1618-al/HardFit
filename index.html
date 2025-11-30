@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HardFit</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <header>
+  <div class="area">
+     <img class="area-img" 
+     src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764048240/Logo_maker_project_v8hx9e.png" 
+     alt="Logo">
+     <h1>HardFit</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#informacion">Información</a></li>
+      <li><a href="#calculadora">Calculadora</a></li>
+      <li><a href="#rutinas">Rutinas</a></li>
+      <li><a href="#suplementos">Suplementos</a></li>
+      <li><a href="#entrenadores">Entrenadores</a></li>
+      <li><a href="#testimonios">Comentarios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section id="inicio">
+    <h2>Bienvenido a HardFit</h2>
+    <p>Transforma tu cuerpo, transforma tu vida. Pasos cortos pero firmes.</p>
+  </section>
+  
+  <div class="muestras">
+    <img id="muestra-img1" src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764048702/muestra1_x3gd0p.jpg" alt="Mi foto">
+    <img id="muestra-img2" src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764049643/muestra2_e8x5ah.jpg" alt="Mi foto">
+  </div>
+
+  <section id="informacion">
+    <h2>Información sobre esta pagina</h2>
+    <p>A continuación encontras tres apartados donde podras ver infomación muy importante acerca de nosotros y las problematicas que tratamos.</p>
+    <div class="infos">
+      <div class="info">
+        <h3>¿Quienes somos?</h3>
+        <p>Aqui encontramas infomación acerca de este sitio web.</p>
+        <a href="quienes.html" class="btn">Ver más</a>
+      </div>
+      <div class="info">
+        <h3>Problemas psicologicos</h3>
+        <p>Te explicaremos las afectaciones que tiene el sobrpeso y la obesidad en la salud mental.</p>
+        <a href="mental.html" class="btn">Ver más</a>
+      </div>
+      <div class="info">
+        <h3>Problemas físicos</h3>
+        <p>Te explicaremos las afectaciones que tiene el sobrepeso y la obesidad en la salud física.</p>
+        <a href="fisico.html" class="btn">Ver más</a>
+      </div>
+    </div>
+  </section>
+
+<section id="calculadora">
+    <h2>Calculadora de Calorías, Macronutrientes y IMC</h2>
+    <p>Usa esta herramienta para estimar tus calorías, macros y tu índice de masa corporal.</p>
+
+    <div class="calc-container">
+      <p class="calc-desc">
+        Los resultados son aproximados y sirven solo como orientación. Consulta siempre a un profesional de la salud o nutriólogo para un plan personalizado.
+      </p>
+
+      <form id="calcForm">
+        <div class="field">
+          <label for="sexo">Sexo</label>
+          <select id="sexo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="edad">Edad (años)</label>
+          <input type="number" id="edad" min="10" max="100" required />
+        </div>
+
+        <div class="field">
+          <label for="peso">Peso (kg)</label>
+          <input type="number" id="peso" step="0.1" min="20" max="300" required />
+        </div>
+
+        <div class="field">
+          <label for="altura">Estatura (cm)</label>
+          <input type="number" id="altura" min="120" max="230" required />
+        </div>
+
+        <div class="field full">
+          <label for="actividad">Nivel de actividad física</label>
+          <select id="actividad" required>
+            <option value="">Selecciona una opción</option>
+            <option value="1.2">Sedentario (casi nada de ejercicio)</option>
+            <option value="1.375">Ligero (1–3 días/semana)</option>
+            <option value="1.55">Moderado (3–5 días/semana)</option>
+            <option value="1.725">Intenso (6–7 días/semana)</option>
+            <option value="1.9">Muy intenso (trabajo físico/deportista)</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="objetivo">Objetivo</label>
+          <select id="objetivo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="bajar">Bajar de peso</option>
+            <option value="mantener">Mantener peso</option>
+            <option value="subir">Ganar masa muscular</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <button type="submit">Calcular</button>
+        </div>
+      </form>
+  
+      <div class="results" id="results" style="display:none;">
+        <h3>Resultados aproximados</h3>
+        <div class="results-grid">
+          <div class="card">
+            <h4>Calorías diarias</h4>
+            <p id="kcal"></p>
+          </div>
+          <div class="card">
+            <h4>Proteínas</h4>
+            <p id="prot"></p>
+          </div>
+          <div class="card">
+            <h4>Grasas</h4>
+            <p id="gras"></p>
+          </div>
+          <div class="card">
+            <h4>Carbohidratos</h4>
+            <p id="carb"></p>
+          </div>
+          <div class="card">
+            <h4>IMC</h4>
+            <p id="imc"></p>
+            <div class="imc-bar-container">
+              <div id="imcBar" class="imc-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="note">
+          Esta herramienta no sustituye la valoración de un médico o nutriólogo.
+          En personas menores de edad, embarazadas o con enfermedades, siempre se debe consultar a un profesional de la salud.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rutinas">
+    <h2>Rutinas Personalizadas</h2>
+    <p>Selecciona tu objetivo y te mostraremos una rutina ideal.</p>
+
+    <div class="rutinas-container">
+      <select id="rutina-Select">
+        <option value="">Selecciona tu objetivo</option>
+        <option value="ganar">Ganar masa muscular</option>
+        <option value="perder">Perder grasa</option>
+        <option value="resistencia">Aumentar resistencia</option>
+      </select>
+      <div class="rutina-result" id="rutina-Result">
+        <p>Selecciona un objetivo para ver tu rutina.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="suplementos">
+  <h2>Suplementos</h2>
+  <p>Productos de máxima calidad para optimizar tu rendimiento.</p>
+
+  <div class="suplementos">
+    <div class="suplemento">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764050831/Untitled_wxymsi.png" alt="Proteína Whey">
+      <h4>Proteína Whey</h4>
+      <p>Fomenta la recuperación muscular y mejora el rendimiento.</p>
+    </div>
+
+    <div class="suplemento">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051111/Untitled_1_ic8eaq.png" alt="Creatina">
+      <h4>Creatina Monohidratada</h4>
+      <p>Aumenta la fuerza y el rendimiento en entrenamientos intensos.</p>
+    </div>
+
+    <div class="suplemento">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051290/Untitled_2_yrd67t.png" alt="Pre-entreno">
+      <h4>Pre-entreno</h4>
+      <p>Incrementa energía, enfoque y resistencia.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="entrenadores">
+  <h2>Nuestros Entrenadores</h2>
+  <p>Profesionales que te guiarán paso a paso.</p>
+
+  <div class="entrenadores">
+    <div class="trainer">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051604/entrenador1_ojg3kj.jpg" alt="Entrenador 1">
+      <h4>Fernando</h4>
+      <p>Especialista en musculación y fuerza.</p>
+      <p>Contactalo al 222 463 1085 para agendar una sesión online.</p>
+    </div>
+
+    <div class="trainer">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051680/entrenador2_hn2akm.avif" alt="Entrenadora 2">
+      <h4>Carlos</h4>
+      <p>Coach en resistencia y tonificación.</p>
+      <p>Contactalo al 222 103 0018 para agendar una sesión online.</p>
+    </div>
+
+    <div class="trainer">
+      <img src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051748/entrenador3_awjfpd.avif" alt="Entrenador 3">
+      <h4>Gael</h4>
+      <p>Experto en rendimiento y nutrición.</p>
+      <p>Contactalo al 222 716 6537 para agendar una sesión online.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="testimonios">
+  <h2>Comentarios de usuarios</h2>
+  <p>Personas que están satisfechas con HardFit.</p>
+
+  <div class="testimonios">
+    
+    <div class="testimonial">
+      <img class="perfil" 
+           src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051920/perfil1_nttagh.jpg" 
+           alt="Comentario de Luis">
+      <p>“Perdí 10 kg en 3 meses y gané confianza. ¡Gracias HardFit!”</p>
+      <h4>- Luis</h4>
+    </div>
+
+    <div class="testimonial">
+      <img class="perfil" 
+           src="https://res.cloudinary.com/dcq25ofjx/image/upload/v1764051940/perfil2_z6eko0.webp" 
+           alt="Comentario de Carlos">
+      <p>“Nunca pensé que volvería a sentirme tan fuerte.”</p>
+      <h4>- Carlos</h4>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer id="contacto">
+    <p>© 2025 HardFit. Todos los derechos reservados.</p>
+    <p>Contáctanos en: <a href="mailto:info@durofitness.com">info@HardFit.com</a> o marca al 222 840 5532</p>
+  </footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
