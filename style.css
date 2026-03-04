@@ -88,6 +88,12 @@ header {
   box-shadow: var(--shadow);
 }
 
+.ejemplo figcaption { 
+  margin-top: 8px; 
+  font-size: 14px; 
+  color: #555; 
+}
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -378,6 +384,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
