@@ -63,6 +63,13 @@ header {
   box-shadow: var(--shadow);
 }
 
+.ejemplos {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 20px;
+}
+
 #ejemplo_casa1 {
   width: 22%;
   border-radius: var(--radius);
@@ -371,3 +378,4 @@ footer {
   transform: translateY(0);
 
 }
+
