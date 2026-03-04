@@ -70,6 +70,7 @@ header {
 }
 .ejemplo { 
   display: flex;
+  flex-directicon: row;
   align-items: center;
   width: 25%;
 } 
@@ -376,6 +377,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
