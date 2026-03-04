@@ -66,11 +66,12 @@ header {
 .contenedor-ejemplos { 
   display: flex;
   justify-content: center;
-  gap: 80px; margin-top: 20px; 
+  gap: 80px;
+  margin-top: 20px; 
 }
 .ejemplo { 
   display: flex;
-  flex-directicon: row;
+  flex-direction:column;
   align-items: center;
   width: 25%;
 } 
@@ -377,6 +378,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
