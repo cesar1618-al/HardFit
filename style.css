@@ -65,8 +65,8 @@ header {
 
 .ejemplo {
   display: flex;
-  justify-content: center;
-  gap: 80px;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -386,6 +386,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
