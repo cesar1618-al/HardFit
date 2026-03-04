@@ -63,23 +63,26 @@ header {
   box-shadow: var(--shadow);
 }
 
-.contenedor-ejemplos { 
+.ejemplo { 
   display: flex;
   justify-content: center;
   gap: 80px;
   margin-top: 20px; 
 }
-.ejemplo { 
+
+.ejemplo-item { 
   display: flex;
   flex-direction:column;
   align-items: center;
   width: 25%;
-} 
+}
+
 #ejemplo_casa1, #ejemplo_casa2, #ejemplo_casa3 { 
   width: 100%;
   border-radius: var(--radius);
   box-shadow: var(--shadow); 
 }
+
 .ejemplo figcaption { 
   text-align: center;
   margin-top: 8px;
@@ -378,6 +381,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
