@@ -9,9 +9,9 @@ const rutinaSelect = document.getElementById("rutina-Select");
         contenido = `
           <h3>Rutina para Ganar Masa Muscular </h3>
           <ul>
-            <li>Pecho y tríceps: Press banca, fondos, extensiones</li>
-            <li>Espalda y bíceps: Dominadas, remo con barra, curls</li>
-            <li>Piernas: Sentadillas, prensa, peso muerto</li>
+             <li>Pecho y tríceps: Fondos, extensiones</li>
+            <li>Espalda y bíceps: Dominadas, remo</li>
+            <li>Piernas: Sentadillas, peso muerto</li>
             <li>Cardio: 20 min suaves 3x por semana</li>
           </ul>
         `;
@@ -98,4 +98,5 @@ const rutinaSelect = document.getElementById("rutina-Select");
 
       document.getElementById("results").style.display = "block";
     });
+
   
