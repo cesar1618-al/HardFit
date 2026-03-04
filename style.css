@@ -64,19 +64,19 @@ header {
 }
 
 #ejemplo_casa1 {
-  width: 22%;
+  width: 25%;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
 #ejemplo_casa2 {
-  width: 22%;
+  width: 26%;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
 #ejemplo_casa3 {
-  width: 22%;
+  width: 20%;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -371,6 +371,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
