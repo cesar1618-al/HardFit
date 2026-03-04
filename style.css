@@ -77,8 +77,14 @@ header {
   width: 25%;
 }
 
-#ejemplo_casa1, #ejemplo_casa2, #ejemplo_casa3 { 
+#ejemplo_casa1, #ejemplo_casa2,{ 
   width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow); 
+}
+
+#ejemplo_casa3 {
+  width: 65%;
   border-radius: var(--radius);
   box-shadow: var(--shadow); 
 }
@@ -381,6 +387,7 @@ footer {
   transform: translateY(0);
 
 }
+
 
 
 
