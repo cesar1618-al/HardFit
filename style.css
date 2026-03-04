@@ -63,7 +63,7 @@ header {
   box-shadow: var(--shadow);
 }
 
-.ejemplos {
+.ejemplo {
   display: flex;
   justify-content: center;
   gap: 80px;
@@ -378,4 +378,5 @@ footer {
   transform: translateY(0);
 
 }
+
 
