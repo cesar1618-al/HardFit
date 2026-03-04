@@ -63,6 +63,24 @@ header {
   box-shadow: var(--shadow);
 }
 
+#ejemplo_casa1 {
+  width: 22%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#ejemplo_casa2 {
+  width: 22%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#ejemplo_casa3 {
+  width: 22%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -351,4 +369,5 @@ footer {
 .fade.show {
   opacity:1;
   transform: translateY(0);
+
 }
